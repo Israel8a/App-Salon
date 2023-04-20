@@ -1,0 +1,22 @@
+{
+    "name": "israel/app-salon_php_mvc_js_sass",
+    "description": "AppSalon con MVC, Composer, Gulps,Php",
+    "autoload": {
+        "psr-4": {
+            "MVC\\": "./",
+            "Controllers\\": "./controllers",
+            "Model\\": "./models",
+            "Clases\\": "./clases"
+        }
+    },
+    "authors": [
+        {
+            "name": "Martin Velazquez"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.7",
+        "vlucas/phpdotenv": "^5.5",
+        "ext-gd": "*"
+    }
+}
