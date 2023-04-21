@@ -32,7 +32,7 @@ $router->get("/admin",[AdmiControllers::class,"index"]);
 $router->get("/api/servicios",[APIControllers::class,"index"]);
 $router->post("/api/citas",[APIControllers::class,"guardar"]); 
 $router->post("/api/elimiar",[APIControllers::class,"eliminar"]);
-//appi servicios 
+//appi servicios
 //Crud de servicios
 $router->get("/servicios",[ServicioControllers::class,"index"]);
 $router->get("/servicios/crear",[ServicioControllers::class,"crear"]);
