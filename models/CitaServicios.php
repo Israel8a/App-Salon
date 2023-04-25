@@ -1,7 +1,7 @@
 <?php
 namespace Model;
 class CitaServicios extends ActiveRecord{
-    protected static $tabla ="citasservicios"; 
+    protected static $tabla ="citasservicios";
     protected static $columnasDB=["id","citaId","servicioId"];
     public $id;
     public $citaId;
