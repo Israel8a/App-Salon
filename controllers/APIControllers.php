@@ -8,8 +8,7 @@ use Model\Servicios;
 class APIControllers {
     public static function index(){
         $servicios = Servicios::all();
-        var_dump($servicios);
-        echo json_encode($servicios);
+        echo json_encode(array_values($servicios));
     }
     public static function guardar(){
         //almacena la cita y devuelve el id
