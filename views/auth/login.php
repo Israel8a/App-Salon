@@ -12,7 +12,7 @@ require_once __DIR__."/../templates/alertas.php";
         <label for="password">Password</label>
         <input type="password" id="password" placeholder="Tu Password" name="password">
     </div>
-    <input type="submit" class="boton" value="Iniciar Session">
+    <input type="submit" class="boton" value="Iniciar Sesion">
 </form>
 <div class="acciones">
     <a href="/crear-cuenta">¿Aún no tienes una cuenta? Crear una</a>
