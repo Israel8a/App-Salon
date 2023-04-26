@@ -2,6 +2,9 @@
 namespace Clases;
 
 use PHPMailer\PHPMailer\PHPMailer;
+use Dotenv\Dotenv as Dotenv;
+$dotenv = Dotenv::createImmutable("../includes/.env");
+$dotenv->safeLoad();
 
 class Email{
     public $nombre;
@@ -15,11 +18,12 @@ class Email{
     public function enviarConfirmacion(){
         $email = new PHPMailer();
         $email->isSMTP();
-        $email->Host = 'sandbox.smtp.mailtrap.io';
+        $email->Host = $_ENV['MAIL_HOST'];
         $email->SMTPAuth = true;
-        $email->Port = 2525;
-        $email->Username = '9bbf6274e888f5';
-        $email->Password = 'e2021028c58c95';
+        $email->Username = $_ENV['MAIL_USER'];
+        $email->Password = $_ENV['MAIL_PASSWORD'];
+        $email->SMTPSecure = 'tls';
+        $email->Port = $_ENV['MAIL_PORT'];
         $email->setFrom("cuentas@appsalon.com");
         $email->addAddress("cuentas@appsalon.com","AppSalon.com");
         $email->Subject="confirma tu cuenta";
