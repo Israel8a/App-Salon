@@ -24,7 +24,7 @@ class AdmiControllers{
         $consulta .= " LEFT OUTER JOIN servicios ";
         $consulta .= " ON servicios.id=citasServicios.servicioId ";
         $consulta .= " WHERE fecha =  '${fecha}' ";
-       $citas = AdminCita::SQL($consulta);
+        $citas = AdminCita::SQL($consulta);
         $router->render("admi/index",[
             "nombre"=>$_SESSION["nombre"],
             "citas"=> $citas,

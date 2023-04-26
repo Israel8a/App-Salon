@@ -4,7 +4,7 @@
 ?>
 <h2>Buscar Citas</h2>
 <div class="busqueda">
-    <form class="formulario">
+    <form class="formulario" method="get">
         <div class="campo">
             <label for="fecha">Fecha</label>
             <input type="date" id="fecha" name="fecha" value="<?php echo $fecha ?>">
@@ -44,7 +44,7 @@
                 if(esUltimo($actual,$siguiente)){
                 ?>
                    <p class="total">Total: <span><?php echo $total ?></span></p>
-                <form action="/api/elimiar" method="post">
+                <form action="/api/eliminar" method="post">
                     <input type="hidden" name="id" value="<?php echo $cita->id; ?>">
                     <input type="submit" value="Eliminar" class="boton-eliminar">
                 </form>
